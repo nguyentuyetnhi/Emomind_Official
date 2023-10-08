@@ -15,9 +15,11 @@ public class Account {
     }
 
 
-    public Account(String username, String password) {
+    public Account(String id, String username, String password, String img) {
+        this.id = id;
         this.username = username;
         this.password = password;
+        this.img = img;
     }
 
     public Account(String id, String username, String password, String name, String email, String phone, String img) {

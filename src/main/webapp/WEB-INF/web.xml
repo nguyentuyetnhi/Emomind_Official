@@ -26,28 +26,28 @@
     </servlet>
     <servlet>
         <servlet-name>ViewProfileServlet</servlet-name>
-        <servlet-class>controller.ViewProfileServlet</servlet-class>
+        <servlet-class>Control.ViewProfileServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SignUpServlet</servlet-name>
-        <servlet-class>controller.SignUpServlet</servlet-class>
+        <servlet-class>Control.SignUpServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UpdatePasswordServlet</servlet-name>
-        <servlet-class>controller.UpdatePasswordServlet</servlet-class>
+        <servlet-class>Control.UpdatePasswordServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SearchServlet</servlet-name>
         <servlet-class>Control.SearchServlet</servlet-class>
     </servlet>
-     <servlet>
+    <servlet>
+        <servlet-name>SendFeedbackServlet</servlet-name>
+        <servlet-class>Control.SendFeedbackServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>ViewFeedbackServlet</servlet-name>
         <servlet-class>Control.ViewFeedbackServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>ViewFeedbackServlet</servlet-name>
-        <url-pattern>/ViewFeedbackServlet</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SearchServlet</servlet-name>
         <url-pattern>/SearchServlet</url-pattern>
@@ -67,6 +67,14 @@
     <servlet-mapping>
         <servlet-name>UpdatePasswordServlet</servlet-name>
         <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendFeedbackServlet</servlet-name>
+        <url-pattern>/SendFeedbackServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewFeedbackServlet</servlet-name>
+        <url-pattern>/ViewFeedbackServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

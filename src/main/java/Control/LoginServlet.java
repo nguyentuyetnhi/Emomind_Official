@@ -5,7 +5,7 @@
 
 package Control;
 
-import database.DAO;
+import Model.DAO;
 import Model.Account;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {
         if (a == null) {
             request.setAttribute("mess", "Wrong user or pass");
             request.getRequestDispatcher("login.jsp").forward(request, response);
-        } else {
+        } else {          
             HttpSession session = request.getSession();
             session.setAttribute("acc", a);
             session.setMaxInactiveInterval(1000);
@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
             cookiePass.setMaxAge(60*60*15);
             cookieRemember.setMaxAge(60*60*15);
             
-            request.getRequestDispatcher("createSolution.jsp").forward(request, response);
+            request.getRequestDispatcher("createSolutions.jsp").forward(request, response);
         } 
     } 
 

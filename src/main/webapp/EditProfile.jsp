@@ -59,22 +59,23 @@
             </button>
             
             <div  style="margin-left:50px;" class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                  <a href="index.html" class="nav-item nav-link active">Home</a>
-                  <a href="about.html" class="nav-item nav-link">About Us</a>
-                  <a href="contact.html" class="nav-item nav-link">Contact</a>
-                  <a href="viewFeedback.html" class="nav-item nav-link">Feedback</a>
-                </div>
-                <div class="navbar-nav ml-auto"> <!-- Sử dụng ml-auto để đặt "Sign In" bên phải -->
-                    <c:if test="${sessionScope.acc == null}"> 
-                        <a href="login.jsp" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Sign In</a>
-                    </c:if>     
+            <div class="navbar-nav">
+              <a href="index.html" class="nav-item nav-link ">Home</a>
+              <a href="about.html" class="nav-item nav-link">About Us</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <a href="ViewFeedbackServlet" class="nav-item nav-link">Feedback</a>
+            </div>
+            <div class="navbar-nav ml-auto"> <!-- S? d?ng ml-auto ?? ??t "Sign In" bên ph?i -->
+                <c:if test="${sessionScope.acc == null}"> 
+                    <a href="login.jsp" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Sign In</a>
+                    <a href="SignUp.jsp" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Sign Up</a>
+                </c:if>         
                 
-                    <c:if test="${sessionScope.acc != null}"> 
-                        <a href="#" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Hello ${sessionScope.acc.username}</a>
-                    </c:if>       
-                </div>
-              </div>
+                <c:if test="${sessionScope.acc != null}"> 
+                    <a href="infor?username=${sessionScope.acc.username}" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Hello ${sessionScope.acc.username}</a>
+                </c:if>       
+            </div>
+          </div>
         </nav>
         <!-- end nav -->
     <form action="edit" method="post" enctype="multipart/form-data">

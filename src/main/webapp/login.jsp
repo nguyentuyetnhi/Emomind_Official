@@ -155,11 +155,11 @@
             <div class="form-group" style="margin-top:30px;">      
                 <input  style=" font-size: x-small;"type="password" id="password" name="password" placeholder ="Password" required value = "<%=pass %>"/>
             </div>
-            <div style="margin-left:-200px;">
+            <div style="margin-left:0px;">
            <input type="checkbox" id="rememberMe" name="rememberMe" value= "1" <%= "1".equals(reme) ?  "checked='/checked'" : "" %> />
                 <label style="font-size: small;margin-top:-5px;" for="rememberMe">Remember Me</label>
                 </div>
-                <div style="font-size: x-small;margin-left:-220px; margin-top:10px;  "class="forgot-password">
+                <div style="font-size: x-small;margin-left:0px; margin-top:10px;  "class="forgot-password">
                     <a href="email" style="color:rgb(51, 63, 222);">Forgot password</a>
                 </div>
      

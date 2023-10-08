@@ -6,7 +6,7 @@
 package Control;
 
 import Model.Account;
-import database.DAO;
+import Model.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;

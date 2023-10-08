@@ -5,7 +5,7 @@
 package Control;
 
 import controller.*;
-import database.DAO;
+import Model.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;

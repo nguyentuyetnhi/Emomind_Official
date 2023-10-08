@@ -107,12 +107,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div  style="margin-left:50px;"class="collapse navbar-collapse" id="navbarCollapse">
+        <div  style="margin-left:50px;" class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
               <a href="index.html" class="nav-item nav-link ">Home</a>
               <a href="about.html" class="nav-item nav-link">About Us</a>
               <a href="contact.html" class="nav-item nav-link">Contact</a>
-              <a href="#" class="nav-item nav-link">Feedback</a>
+              <a href="ViewFeedbackServlet" class="nav-item nav-link">Feedback</a>
             </div>
             <div class="navbar-nav ml-auto"> <!-- S? d?ng ml-auto ?? ??t "Sign In" bên ph?i -->
                 <c:if test="${sessionScope.acc == null}"> 

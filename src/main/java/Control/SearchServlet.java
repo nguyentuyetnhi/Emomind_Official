@@ -4,7 +4,7 @@
  */
 package Control;
 
-import database.DAO;
+import Model.DAO;
 import Model.Feedback;
 import Model.ItemMethod;
 import java.io.IOException;

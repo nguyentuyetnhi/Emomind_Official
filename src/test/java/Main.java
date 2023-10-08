@@ -1,8 +1,8 @@
 
-import database.DAO;
+import Model.DAO;
 import java.time.LocalDate;
 import java.util.List;
-import model.User;
+import Model.User;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

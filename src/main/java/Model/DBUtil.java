@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package database;
+package Model;
     
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
@@ -20,9 +20,9 @@ public class DBUtil {
         Connection conn = null;
         try {
 
-            String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=EmoMind;;encrypt=true;trustServerCertificate=true;";
+            String dbURL = "jdbc:sqlserver://PHANKHANHQUYNH\\PHANKHANHQUYNH;databaseName=EmoMind;;encrypt=true;trustServerCertificate=true;";
             String user = "sa";
-            String pass = "someThingComplicated1234";
+            String pass = "minaquynh111903";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             conn = DriverManager.getConnection(dbURL, user, pass);
             //System.out.println("Connect to DB successfully");

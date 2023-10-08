@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package database;
+package Model;
 
 import Model.Account;
 import Model.Feedback;
@@ -146,7 +146,7 @@ public class DAO implements Serializable {
         }
     }
     public Account login(String user, String pass) {
-        String query = "select UserName, Password from Users\n"
+        String query = "select UserID, UserName, Password, img from Users\n"
                 + "where UserName = ?\n"
                 + "and Password = ?";
         try{
@@ -155,7 +155,7 @@ public class DAO implements Serializable {
             ps.setString(2, pass);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                return new Account(rs.getString(1),rs.getString(2));
+                return new Account(rs.getString(1),rs.getString(2), rs.getString(3), rs.getString(4));
             }
             conn.close();
         } catch (Exception ex) {
@@ -180,6 +180,7 @@ public class DAO implements Serializable {
         return null;
     }
     
+   
     public String getPass (String username) {
         String query = "select Password from Users where UserName = ?";
         try {
