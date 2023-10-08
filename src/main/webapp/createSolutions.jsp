@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 <!DOCTYPE html>
@@ -88,30 +89,46 @@
     </div>
     <!-- Spinner End -->
     <!-- Navbar Start -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <a href="index.html" class="navbar-brand w-25">
-                <img src="./img/Logo.png" class="w-75" alt="Logo-EmoMind">
-            </a>
-        </nav> -->
+     <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4">
+                <img  style=" width:200px;
+                height:50px; margin-top:20px;margin-left:10px;"class="logo" src="img/Group 1.png">
+         <!-- <h2 style="background-color: #FBF8EF; color: black; margin-left: 20px; margin-top: 12px;">EmoMind</h2>-->
+        </div>
+        <div class="col-12 col-md-8 text-right"> <!-- S? d?ng text-right ?? ??t n?i dung bên ph?i -->
+       <!---   <a href="mailto:ntnhi2023@gmail.com">ntnhi2023@gmail.com</a>-->
+        </div>
+      </div>
+      
+
     <nav class="navbar navbar-expand bg navbar-light sticky-top px-2px-lg-3 py-lg-0" style="background-color: #FCECB2 ">
         <a href="index.html" class="navbar-brand">
-
+           
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div style="margin-left:50px;" class="collapse navbar-collapse" id="navbarCollapse">
+        
+        <div  style="margin-left:50px;"class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                <a href="viewFeedback.html" class="nav-item nav-link">Feedback</a>
+              <a href="index.html" class="nav-item nav-link ">Home</a>
+              <a href="about.html" class="nav-item nav-link">About Us</a>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <a href="#" class="nav-item nav-link">Feedback</a>
             </div>
             <div class="navbar-nav ml-auto"> <!-- Sử dụng ml-auto để đặt "Sign In" bên phải -->
-                <a href="login.html" class="nav-item nav-link ml-auto "><i class="fas fa-user"></i> Sign In</a>
+                <c:if test="${sessionScope.acc == null}"> 
+                    <a href="login.jsp" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Sign In</a>
+                    <a href="SignUp.jsp" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Sign Up</a>
+                </c:if>     
+                
+                <c:if test="${sessionScope.acc != null}"> 
+                    <a href="infor?username=${sessionScope.acc.username}" class="nav-item nav-link ml-auto active "><i class="fas fa-user"></i> Hello ${sessionScope.acc.username}</a>
+                </c:if>       
             </div>
-        </div>
+          </div>
+
         </div>
     </nav>
     <!-- Navbar End -->
@@ -205,7 +222,7 @@
     <!-- end create solution -->
     
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+<!--    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -269,7 +286,7 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        /*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
@@ -283,7 +300,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Footer End -->
 
 

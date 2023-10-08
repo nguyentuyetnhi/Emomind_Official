@@ -20,7 +20,7 @@ public class DBUtil {
         Connection conn = null;
         try {
 
-            String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=Spoil;encrypt=true;trustServerCertificate=true;";
+            String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=EmoMind;;encrypt=true;trustServerCertificate=true;";
             String user = "sa";
             String pass = "someThingComplicated1234";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

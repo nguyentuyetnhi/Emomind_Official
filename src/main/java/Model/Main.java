@@ -4,6 +4,7 @@
  */
 package Model;
 
+import database.DAO;
 import java.util.ArrayList;
 import java.util.List;
 

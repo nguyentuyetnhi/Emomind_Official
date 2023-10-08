@@ -4,14 +4,9 @@
  */
 package Control;
 
-import database.DAO;
-import Model.Feedback;
-import Model.ItemMethod;
+import controller.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,9 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author ASUS
+ * @author tramy
  */
-public class SearchServlet extends HttpServlet {
+public class FinalEmotions extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,10 +35,10 @@ public class SearchServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SearchServlet</title>");
+            out.println("<title>Servlet FinalEmotions</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SearchServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet FinalEmotions at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,7 +56,7 @@ public class SearchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        processRequest(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -75,18 +70,10 @@ public class SearchServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        processRequest(request, response);
-        DAO dao = new DAO();
-        List<ItemMethod> itemList = new ArrayList<>();
-        String searchPattern = request.getParameter("searchPattern");
-        if (searchPattern == null){
-            searchPattern = "";
-        }
-        itemList = dao.SearchMethod(searchPattern);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("SearchMethod.jsp");
-        request.setAttribute("itemList", itemList);
-        request.setAttribute("searchPattern", searchPattern);
-        requestDispatcher.forward(request, response);
+        String[] emotions = request.getParameterValues("emotionOfUserStory");
+        request.setAttribute("emotions", emotions);
+        request.getRequestDispatcher("displayEmotions.jsp").forward(request, response);
+        
     }
 
     /**

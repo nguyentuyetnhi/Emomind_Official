@@ -36,6 +36,22 @@
         <servlet-name>UpdatePasswordServlet</servlet-name>
         <servlet-class>controller.UpdatePasswordServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>Control.SearchServlet</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>ViewFeedbackServlet</servlet-name>
+        <servlet-class>Control.ViewFeedbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewFeedbackServlet</servlet-name>
+        <url-pattern>/ViewFeedbackServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>

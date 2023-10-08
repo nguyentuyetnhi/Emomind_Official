@@ -5,7 +5,7 @@
 
 package Control;
 
-import Model.DAO;
+import database.DAO;
 import Model.Account;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
             cookiePass.setMaxAge(60*60*15);
             cookieRemember.setMaxAge(60*60*15);
             
-            request.getRequestDispatcher("share.jsp").forward(request, response);
+            request.getRequestDispatcher("createSolution.jsp").forward(request, response);
         } 
     } 
 

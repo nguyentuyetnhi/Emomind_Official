@@ -4,7 +4,7 @@
  */
 package controller;
 
-import database.Dao;
+import database.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -71,7 +71,7 @@ public class LoginServlet extends HttpServlet {
     String password = request.getParameter("password");
 
     // Get the DAO instance
-    Dao dao = new Dao();
+    DAO dao = new DAO();
     // Get the user from the database
     User user = dao.getAll(user_id, password);
     // If the user is valid

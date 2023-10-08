@@ -4,7 +4,7 @@
  */
 package Control;
 
-import Model.DAO;
+import database.DAO;
 import Model.Feedback;
 import javax.servlet.RequestDispatcher;
 import java.io.IOException;

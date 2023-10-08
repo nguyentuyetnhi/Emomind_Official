@@ -91,7 +91,7 @@
         <div style="margin-top :60px;margin-right:-20px;" class="col-12 col-md-6">
             <h1> Exploration, Learning, <br> and Healing </h1>
             <div style="margin-left:-70px;font-size:20px;margin-top:30px;">"Support on the journey to find balance and happiness in life!"</div>
-            <a  href="login.html" style="margin-top:80px;margin-left:70px;background-color:#F8D57E;"class="btn btn-primary py-3 px-5" href="">Get Started <i class="fa fa-arrow-right ms-2"></i></a>
+            <a  href="login.jsp" style="margin-top:80px;margin-left:70px;background-color:#F8D57E;"class="btn btn-primary py-3 px-5" href="">Get Started <i class="fa fa-arrow-right ms-2"></i></a>
         </div>
     </div>
     
